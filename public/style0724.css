@@ -1,0 +1,66 @@
+body {
+    background-image: url(https://dnvefa72aowie.cloudfront.net/business-profile/bizPlatform/profile/85258406/1724031204074/SU1HXzU0NzIuanBlZw==.jpeg?q=95&s=1440x1440&t=inside);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100vh;                /* ✅ 전체 높이 지정 필수 */
+    margin: 0;                    /* ✅ 여백 제거 */
+    display: flex;
+    justify-content: center;     /* ✅ 가로 가운데 */
+    align-items: center;         /* ✅ 세로 가운데 */
+    font-family: 'Arial', sans-serif;
+}
+
+h1{
+    color: white;
+}
+form{
+    background-color: rgba(0, 0, 0, 0.6);  /* 반투명 검정 */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    width: 350px;
+    color: white;  /* 흰 글씨 */
+}
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;  /* form 안에서 꽉 채우기 */
+    padding: 10px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;  /* ✅ 이거 중요 */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745; /* 녹색 */
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+.gym-title {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(0,0,0,0.7);
+}
