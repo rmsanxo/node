@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko"> <!--이페이지는 한국어로 작성되어있-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="style0724.css">
+  
+</head>
+<body>
+     <div class="gym-title">RMSANXO Fitness Club</div>
+    <form id="signupForm" action="/signup" method="POST">
+    <h1>회원가입</h1>
+    <label for="username">아이디</label>
+    <input type="text" id="username" name="username" required><br><br>
+    <label for="password">비밀번호</label>
+    <input type="password" id="password" name="password" required><br><br>
+    <label for="email">이메일</label>
+    <input type="email" id="email" name="email" required><br><br>
+    <button type="submit">가입하기</button><br><br>
+</form>
+<script>
+  const form = document.getElementById("signupForm");
+
+  form.addEventListener("submit", function (event) {
+    const username = document.getElementById("username").value.trim();
+
+    // 유효성 검사: 4~12자 / 영문+숫자만 / 공백 금지
+    const idRegex = /^[a-zA-Z0-9]{4,12}$/;
+    if (!idRegex.test(username)) {
+      alert("아이디는 영어/숫자 조합 4~12자여야 합니다.");
+      document.getElementById("username").focus();
+      event.preventDefault(); // 전송 막기
+      return;
+    }
+
+    // 나머지는 서버로 전송됨 (method="POST", action="signup.php")
+  });
+</script>
+
+</body>
+</html>
